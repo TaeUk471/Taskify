@@ -21,8 +21,14 @@ import SearchIcon from '@/public/images/icon/search.svg';
 import SettingIcon from '@/public/images/icon/setting.svg';
 import UnsubscribeIcon from '@/public/images/icon/unsubscribe.svg';
 import VioletPlusIcon from '@/public/images/icon/violet_plus.svg';
+<<<<<<< HEAD
 import VisibleEyeIcon from '@/public/images/icon/visible_eye.svg';
 import WhiteCheckIcon from '@/public/images/icon/white_check.svg';
+=======
+import DeleteIcon from '@/public/images/icon/delete.svg';
+import NotFound from '@/public/images/icon/404Icon.svg';
+import RightArrow from '@/public/images/icon/arrow-right.svg';
+>>>>>>> 9aa430921c85de7e61f6154e288c10044ddf4d35
 
 export {
   ArrowBackwardIcon,
@@ -50,6 +56,8 @@ export {
   VisibleEyeIcon,
   VioletPlusIcon,
   DeleteIcon,
+  NotFound,
+  RightArrow,
 };
 
 // Image

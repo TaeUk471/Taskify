@@ -17,8 +17,6 @@ const MemberTable = ({ dashboardId }: { dashboardId: number }) => {
   const [members, setMembers] = useState(null);
   const showCount = 5;
 
-  console.log(members);
-
   const handleLoadMembers = async () => {
     try {
       const { members, totalCount } = await getDashBoardMembers({
@@ -32,13 +30,19 @@ const MemberTable = ({ dashboardId }: { dashboardId: number }) => {
       }));
       setMembers(members);
     } catch (error: any) {
-      console.error(error);
+      alert(error);
     }
   };
 
   const handleDeleteMember = async (event: MouseEvent<HTMLButtonElement>) => {
     const memberId = event.currentTarget.id;
-    deleteDashBoardMember({ memberId });
+
+    try {
+      await deleteDashBoardMember({ memberId });
+      alert('삭제되었습니다.');
+    } catch (error: any) {
+      alert(error.message);
+    }
   };
 
   useEffect(() => {

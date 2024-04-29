@@ -4,6 +4,7 @@ import { DragDropContext, Droppable, DropResult } from '@hello-pangea/dnd';
 import { usePathname } from 'next/navigation';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 
+import { BUTTON, MESSAGE } from '@/components/Dashboard/constants';
 import CreateColumnModal from '@/components/Modal/CreateColumnModal';
 import AddButton from '@/components/common/button/add';
 import Column from '@/components/dashboard/Column/Column';
@@ -19,7 +20,7 @@ const Dashboard = () => {
 
   const path = usePathname();
   const dashboardId = path.split('/')[2];
-  const columnTitle = columnList.map(column => column.title);
+  const columnTitle = columnList && columnList.map(column => column.title);
 
   const getDashboardColumnList = async () => {
     try {
@@ -36,7 +37,7 @@ const Dashboard = () => {
 
   const handleCreateColumn = async () => {
     if (columnTitle.includes(newColumnTitle)) {
-      alert('중복된 컬럼이 존재합니다.');
+      alert(MESSAGE.IS_DUPLICATE_COLUMN);
       return;
     }
 
@@ -140,7 +141,7 @@ const Dashboard = () => {
         </Droppable>
       </DragDropContext>
       <div className='mb:sticky mb:py-5 mb:bottom-0 min-w-[20rem] my-11 py-16 px-5 bg-tp-gray_500'>
-        <AddButton onClick={handleToggleModal}>새로운 컬럼 추가하기</AddButton>
+        <AddButton onClick={handleToggleModal}>{BUTTON.ADD_COLUMN}</AddButton>
         {isShowModal && (
           <CreateColumnModal
             handleModal={handleToggleModal}
