@@ -1,14 +1,14 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { getAccessToken } from 'utils/handleToken';
 
 import EmptyMessage from '../EmptyMessage/EmptyMessage';
 import InvitationList from '../InvitationList/InvitationList';
 import SearchBar from '../SearchBar/SearchBar';
 import { INVITATION_TABLE, MESSAGE } from '../constants';
-import { getAddInvitationList, getMyInvitationList } from '@/utils/api/getMyInvitationList';
 
-import { getAccessToken } from 'utils/handleToken';
+import { getAddInvitationList, getMyInvitationList } from '@/utils/api/getMyInvitationList';
 
 const InvitationSection = () => {
   const [invitationList, setInvitationList] = useState([]);

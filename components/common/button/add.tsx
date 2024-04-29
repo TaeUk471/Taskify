@@ -1,6 +1,6 @@
+import { I_ADD_BUTTON } from 'interface/button';
 import Image from 'next/image';
 
-import { I_ADD_BUTTON } from 'interface/button';
 import PLUS_VIOLET from '@/public/images/icon/violet_plus.svg';
 
 const AddButton = ({ children, onClick }: I_ADD_BUTTON) => {

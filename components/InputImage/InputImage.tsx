@@ -1,4 +1,3 @@
-import { changeUserProfileImage } from '@/utils/api/changeUserProfileImage';
 import { VioletPlusIcon } from 'constant/importImage';
 import Image from 'next/image';
 import { ChangeEvent, useEffect, useState } from 'react';

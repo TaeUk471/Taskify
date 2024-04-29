@@ -1,22 +1,21 @@
+import { CloseIcon, MoreVertIcon } from 'constant/importImage';
+import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
 
-import Image from 'next/image';
 import ModalLayout from '../ModalLayout';
-
 import ModalTextarea from '../input/ModalTextarea';
+
 import EditCardModal from './EditCardModal';
+import InformationChip from './components/InformationChip';
 import ModalComment from './components/ModalComment';
 import Popover from './components/Popover';
-import InformationChip from './components/InformationChip';
-import { CloseIcon, DEFAULTPROFILEIMAGE, MoreVertIcon, UnsubscribeIcon } from 'constant/importImage';
 
 import ProgressChip from '@/components/common/Chip/ProgressChip';
 import TagChip from '@/components/common/Chip/TagChip';
-import { getCommentList, getAddCommentList, createCommentData } from '@/utils/api/comment';
-import { getAccessToken } from '@/utils/handleToken';
 import { useHandleModal } from '@/hooks/useHandleModal';
 import { I_Column, I_Members, I_Card, I_Dashboard } from '@/interface/Dashboard';
-import { unsubscribe } from 'diagnostics_channel';
+import { getCommentList, getAddCommentList, createCommentData } from '@/utils/api/comment';
+import { getAccessToken } from '@/utils/handleToken';
 
 interface I_WorkModal {
   handleModal: () => void;

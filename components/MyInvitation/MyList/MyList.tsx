@@ -1,23 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-
-import { useRouter } from 'next/navigation';
+import { ArrowBackwardIcon, CrownIcon } from 'constant/importImage';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
-import AddButton from '@/components/common/button/add';
+import { INITIAL_COLOR, BUTTON_TITLE } from '../constants';
+
 import CreateDashboardModal from '@/components/Modal/CreateDashboardModal';
 import PageNationButton from '@/components/PageNation/PageNationButton';
-
-import { getMyDashboardList } from '@/utils/api/getMyDashboardList';
-import { createDashborad } from '@/utils/api/createDashboard';
-
-import { usePageNation } from '@/hooks/usePageNation';
+import AddButton from '@/components/common/button/add';
 import { useHandleModal } from '@/hooks/useHandleModal';
-
-import { ArrowBackwardIcon, CrownIcon } from 'constant/importImage';
-import { INITIAL_COLOR, BUTTON_TITLE } from '../constants';
+import { usePageNation } from '@/hooks/usePageNation';
+import { createDashborad } from '@/utils/api/createDashboard';
+import { getMyDashboardList } from '@/utils/api/getMyDashboardList';
 
 const MyList = () => {
   const [newDashboardTitle, setNewDashBoardTitle] = useState('');

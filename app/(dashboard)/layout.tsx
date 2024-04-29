@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+
 import DashboardHeader from '@/components/dashboard/LayoutComponents/header';
 import SideMenu from '@/components/dashboard/LayoutComponents/sideMenu';
+
 import '@/styles/globals.css';
-import Image from 'next/image';
-import Link from 'next/link';
+// eslint-disable-next-line import/order
 import { PropsWithChildren } from 'react';
+
 import { getAccessToken } from '@/utils/handleToken';
 
 const DashboardLayoutProfile = ({ children }: PropsWithChildren) => {

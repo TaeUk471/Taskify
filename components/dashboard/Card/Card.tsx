@@ -1,11 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
 import { Draggable } from '@hello-pangea/dnd';
-
-import TagChip from '@/components/common/Chip/TagChip';
-
 import { CalendarTodayIcon } from 'constant/importImage';
+import Image from 'next/image';
+import React from 'react';
+
 import WorkModal from '@/components/Modal/WorkModal/WorkModal';
+import TagChip from '@/components/common/Chip/TagChip';
 import { useHandleModal } from '@/hooks/useHandleModal';
 import { I_Card, I_Column, I_Members, I_Dashboard } from '@/interface/Dashboard';
 
